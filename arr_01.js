@@ -44,7 +44,7 @@ const TAGS = [  "html",
 let stack = [];
 
 // Modul: HTML-Synthese | Test
-output(getHTML());
+// output(getHTML());
 function getHTML() {
 
     let htmlstr = "";
@@ -108,9 +108,23 @@ function isOpenElement(tag) {
     
     
 }
+const TAB = "\t";
+// const GAP = " ";
+const ENTER = "\n";
+function fullname(firstName,lastName) {
+    return firstName + ENTER + lastName;
+}
+output(fullname("Lawrence","Taula"));
+
+// function fullName(a,b) {
+//     let c = a + b;
+//     return c;
+// }
+// output(fullName("Lawrence","Taula"));
 
 // Modul: Ausgabe | Test
 //output("hi");
 function output(outputData) {
     console.log(outputData);
 }
+
