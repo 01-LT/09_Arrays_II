@@ -34,9 +34,9 @@ const TAGS = [  "html",
 				"body",
                 "h1","h1",
                 "p","p",
-                "ul","li","li","li","li","li","li","ul",
-                "p","p",
-                "ol","li","li","ol",
+                "ul",
+                "li","li","li","li","li","li",
+                "ul",
                 "body",
 				"html"
             ];
@@ -44,14 +44,14 @@ const TAGS = [  "html",
 let stack = [];
 
 // Modul: HTML-Synthese | Test
-// output(getHTML());
+output(getHTML());
 function getHTML() {
 
     let htmlstr = "";
 
     for (let i = 0; i < TAGS.length; i++) 
     {   
-        if (isOpenElement()) 
+        if (isOpenElement(TAGS[i])) 
         // if(true)
         // if(false)
         {
@@ -82,11 +82,16 @@ function getElement(tag,op) {
     }
 }
 
-output(isOpenElement(TAGS[0]));
-output(isOpenElement(TAGS[1]));
-output(isOpenElement(TAGS[2]));
-output(isOpenElement(TAGS[3]));
-output(isOpenElement(TAGS[4]));
+// output(isOpenElement(TAGS[0]));
+// output(isOpenElement(TAGS[1]));
+// output(isOpenElement(TAGS[2]));
+// output(isOpenElement(TAGS[3]));
+// output(isOpenElement(TAGS[4]));
+// output(isOpenElement(TAGS[5]));
+// output(isOpenElement(TAGS[6]));
+// output(isOpenElement(TAGS[7]));
+// output(isOpenElement(TAGS[8]));
+// output(isOpenElement(TAGS[9]));
 function isOpenElement(tag) {
     
     let cond = (tag != stack[stack.length -1]);
