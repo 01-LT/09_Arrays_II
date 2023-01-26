@@ -25,7 +25,8 @@ einer HTML-Seite ausgibt:
 <html><head></head><body><h1></h1><p></p></body></html>
 Verwenden Sie dafür die untenstehenden Arrays
 */
-
+const ENTER     = "\n";
+const TAB       = "\t";
 const ERR_STR   = "ERROR";
 const COBJ      = {open_o:"<",close_o:"</",close:">"}
 const CONTROLS  = ["<", "</", ">"];
@@ -108,19 +109,20 @@ function isOpenElement(tag) {
     
     
 }
-const TAB = "\t";
-// const GAP = " ";
-const ENTER = "\n";
-function fullname(firstName,lastName) {
-    return firstName + ENTER + lastName;
-}
-output(fullname("Lawrence","Taula"));
-
-// function fullName(a,b) {
-//     let c = a + b;
-//     return c;
+/*****Keyboard Commands******/
+// const TAB = "\t";
+// // const GAP = " ";
+// const ENTER = "\n";
+// function fullname(firstName,lastName) {
+//     return firstName + ENTER + lastName;
 // }
-// output(fullName("Lawrence","Taula"));
+// output(fullname("Lawrence","Taula"));
+
+/******* Arrow Function using .map() **********/
+
+const lcStates = ["md", "va", "wv"];
+const ucStates = lcStates.map((element) => element.toUpperCase());
+output(ucStates);
 
 // Modul: Ausgabe | Test
 //output("hi");
